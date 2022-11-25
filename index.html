@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/grid_mob.css">
+	<html lang="en">
+	<title>Lab 5 Radzivilo</title>
+	<script src="scripts.js"></script>
+	
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body onload="start_page()">
+    <header class="header-flex">
+		<div class="header_flex">
+			<div class="h2_fl">
+				<form>
+					<label for="form_number">Number:</label><br>
+  					<input type="text" id="form_number"><br><br>
+ 					 <input type="submit" onclick="checkCookie()" style="background-color:lightcyan; margin:2%" value="Get reverse number">
+				</form>
+			</div>
+			<div>
+			<p>Select your size:</p>
+			<div id="group" onloadstart="checkTextAlign()">
+			</div>
+		</div>
+			<div >
+		<div class="h1_fl" id = "x"> Lera </div>
+		<button type="button" onclick="changeName()">Change name</button>
+	</div>
+		<button type="button" onclick="clean_local_storage()">Clean local storage</button>
+	</div>
+    </header>
+
+	              
+	<main class="main_flex">
+		<div class="three_fo_fi_fl"> 
+		<div id="menu">
+			<ul>
+				<div id = "menu_text">
+				<div ><li><a href="https://en.wikipedia.org/wiki/Ukraine">Ukraine</a></li></div>
+                <div ><li><a href="https://en.wikipedia.org/wiki/Zaporizhzhia">Zaporizhzhia</a></li></div>
+                <div><li class="active"><a href="index.html">Grid</a></li></div>
+			</div>
+			</ul>
+		</div>
+		<div class="list_bot_fl">
+		<div id="list_area"  class="three_text right_text">
+			<div class="three_text">Area:</div>
+			<div class="three_text">a =</div>
+			<div class="three_text" id = "a">Tea</div>
+			<div class="three_text">b =</div>
+			<div class="three_text" id = "b">Brain</div>
+			<div class="three_text">h =</div>
+			<div class="three_text" id="h">Coffee</div>
+			<div class="three_text">S = </div>
+			<div class="three_text" id = "P">Milk</div>
+			<button type="button" onclick="getPlosha()">Get Plosha</button>
+
+		</div>
+		<p id="plain_text" class="three_text right_text five_text">"Цей сайт був написаний на планшеті Xiaomi Mi Pad4 під час відключень електроенергії. Хай вся русня і путін здохнуть поскоріше. Слава ЗСУ. І поставте макс будь ласка))"</p>
+		
+	</div>
+	<!-- <img class="zp_image" src="https://images.indianexpress.com/2022/10/cover-7.jpg" alt="Zp"> -->
+	
+	<div class="after_image">
+	  <div>List of people who signed:</div>
+	  <ol type="1" id="myList">
+	    
+	    
+	  </ol>
+	</div>
+	
+		<div class="h2_foot">
+			<div class="foot_text">
+			  <button id="show_fl"> Who visited the website? Sign in </br> Focus here to see the form</button> 
+			<form id ="focus_form">
+			  <label for="fname">Your name:</label><br>
+			  <input type="text" id="fname" name="fname" value="John Doe"><br>
+			  <button type="button" onclick="addElement()" >Submit</button>
+			</form>
+			</div>
+			<div id="y" class="zip_foot">Zip</div>
+		
+		</div>
+			
+			
+		</div>
+				
+		
+		
+	</main>
+			
+	<footer>
+
+	</footer>
+	<script>
+		const opts = ['Menu', 'List', 'Plain Text'];
+	
+		// generate the radio groups        
+		const group = document.querySelector("#group");
+		group.innerHTML = opts.map((op) => `<div>
+				<input type="radio" name="size" value="${op}" id="${op}">
+				 <label for="${op}">${op}</label>
+			</div>`).join(' ');
+		
+		// add an event listener for the change event
+		const radioButtons = document.querySelectorAll('input[name="size"]');
+		for(const radioButton of radioButtons){
+			radioButton.addEventListener('change', showSelected);
+		}        
+		
+		function showSelected(e) {
+			console.log(e);
+			if (this.checked) {
+		let chosen_val="";
+      
+      if(this.value.toString()=="Menu")
+          {chosen_val = "menu_text" ;}
+      if(this.value.toString()=="List")
+        {chosen_val = "list_area";}
+      if(this.value.toString()=="Plain Text")
+        {chosen_val = "plain_text";}
+			document.getElementById(chosen_val).style.textAlign="left";
+			//localStorage.setItem(chosen_val,"left");
+			SetlocalStorForAligns();
+			  
+			}
+			
+		}
+		var show_flag =document.getElementById("show_fl");
+		var form_to_show =document.getElementById("focus_form");
+		show_flag.addEventListener('focus',function(){
+		  form_to_show.style.display ='block';
+		});
+		show_flag.addEventListener('focusout',function()
+		{
+		  form_to_show.styke.display = "none";
+		})
+	</script>
+</body>
+</html>
