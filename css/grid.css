@@ -1,0 +1,176 @@
+html{
+    overflow-x: hidden;
+}
+body {
+    background-color: #264653;
+}
+
+header {
+
+    background: lightblue;
+}
+
+.header_flex{
+    padding: 10px 0;
+
+    display: grid;
+    margin: 1px;
+    padding: 1px;
+    grid-template-columns: auto auto;
+
+}
+
+.main_flex{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+h2{
+    width:50%;
+    font-size: 20px;
+}
+
+
+.h2_fl{
+font-size: 22px;
+margin-right: 200px;
+
+}
+
+.h1_fl {
+    display: grid;
+    align-self: right;
+    width:100px;
+margin: 20px;
+text-align: right;
+background-color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 40px;
+
+
+color: #000000;
+}
+
+#menu{
+    display: grid;
+	background-color: #006c78;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+#menu ul{
+    text-align: center;
+    float: right;
+    margin: none;
+}
+     
+#menu li{
+    display: inline-block;
+    padding: none;
+    margin: none;
+}
+
+#menu li a, #menu li span{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 100px;
+}
+     
+#menu li a{
+        
+	
+	color: #FFF;
+}
+.three_fo_fi_fl{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 220px 800px 500px;
+    
+
+}
+
+
+.right_text{
+	background-color: #0265a2;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 22px;
+
+}
+
+.three_text{
+	background-color: aliceblue;
+	padding-left: 50px;
+}
+
+.five_text{
+	background-color: rgb(158, 179, 196);
+    
+    
+}
+
+.footer_fl{
+    display: grid;
+    background-color: lightblue;
+    
+    grid-column: 2 / 4;
+
+}
+
+
+.page_three_link{
+	text-align: center;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 50px;
+    background-color: #0265a2;
+	
+
+	color: #810202;
+}
+
+
+.zp_image{
+    display: grid;
+        width: 100%;
+}
+
+.h2_foot{
+    background-color: lightblue;
+    padding: 1%;
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 60% 20%;
+
+}
+.foot_text
+{
+    text-align: left;
+    margin: 1%;
+    font-size: 100%;
+
+}
+.zip_foot{
+    background-color: #FFF;
+    width: 100%;
+    font-size: 200%;
+    text-align: right;
+
+}
+button{
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+}
+
+.after_image{
+  background-color: whitesmoke;
+}
+
